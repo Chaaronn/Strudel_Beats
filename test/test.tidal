@@ -1,0 +1,27 @@
+
+setcps (90/60/4)
+
+d1 $ s "bd ~ bd*2 [~ bd]"# gain 0.9
+
+d2 $ s "~ cp ~ cp"
+  # gain 0.9
+
+d3 $ s "hh*4" # gain 0.85 # cut 1
+
+
+d4 $
+  stack
+    [ n "cs5" # s "superpiano"
+    , n "a4"  # s "superpiano"
+    , n "fs4" # s "superpiano"
+    ]
+  # sustain 3
+  # gain 0.9
+
+d6 $ slow 2
+    $ n "fs6@1 gs6@0.25 a6@0.75 b6@1 cs7@1 fs7@1 e7@0.25 fs7@0.25 e7@0.25 ds7@0.75 cs7@1 b6@1 a6@1.25 gs6@0.75 fs6@1 fs6@1 fs6@1 ~"
+    # s "superpiano"
+    # legato 1.1
+    # gain 0.8
+
+hush
